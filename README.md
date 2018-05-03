@@ -4,6 +4,20 @@
 
 By [Florian Eckerstorfer](https://florian.ec).
 
+## Idea
+
+Everyone loves emoji 💯🎉🔥, but if you use [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) to check the accessibility of your JSX you probably know that Emoji need special handling to become accessible. Instead of just writing the emoji, you need to wrap it in a `span` and add `role="img"` and `aria-labelledby` attributes.
+
+```
+Gatsby is 💯
+```
+
+will turn into
+
+```
+Gatsby is <span role="img" aria-labelledby="hundred points">💯</span>
+```
+
 ## Installation
 
 First install the plugin with NPM or Yarn:
