@@ -1,0 +1,12 @@
+sudo: false
+language: node_js
+node_js:
+- '6'
+- '8'
+install:
+- npm install
+script:
+- npm install
+after_success:
+- npx codecov
+skip_cleanup: true

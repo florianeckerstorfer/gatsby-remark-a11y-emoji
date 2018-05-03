@@ -1,0 +1,37 @@
+{
+  "name": "gatsby-remark-a11y-emoji",
+  "description": "Gatsby Plugin to make Emoji in Markdown accessible. Wraps Emoji in a <span>-Tag with role and aria-labelledby attributes.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
+  "bugs": {
+    "url": "https://github.com/florianeckerstorfer/gatsby-remark-a11y-emoji/issues"
+  },
+  "scripts": {
+    "build": "babel --out-dir . --ignore __tests__ src",
+    "prepublish": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore __tests__",
+    "test": "jest --coverage"
+  },
+  "homepage": "https://github.com/florianeckerstorfer/gatsby-remark-a11y-emoji",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "remark",
+    "emoji",
+    "a11y"
+  ],
+  "main": "index.js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.4",
+    "jest": "^22.4.3",
+    "remark": "^9.0.0",
+    "unist-util-visit": "^1.3.0"
+  },
+  "dependencies": {
+    "emoji-regex": "^6.5.1",
+    "gemoji": "^4.2.1"
+  }
+}
