@@ -18,7 +18,7 @@ describe('gatsby-remark-a11y-emoji', () => {
     const result = plugin({ markdownAST });
 
     visit(result, 'html', node => {
-      expect(node.value).toBe('<span role="img" aria-labelledby="guitar">🎸</span>');
+      expect(node.value).toBe('<span role="img" aria-label="guitar">🎸</span>');
     });
   });
 
@@ -27,7 +27,7 @@ describe('gatsby-remark-a11y-emoji', () => {
     const result = plugin({ markdownAST });
 
     visit(result, 'html', node => {
-      expect(node.value).toBe('foo <span role="img" aria-labelledby="guitar">🎸</span> bar <span role="img" aria-labelledby="headphone">🎧</span> qoo');
+      expect(node.value).toBe('foo <span role="img" aria-label="guitar">🎸</span> bar <span role="img" aria-label="headphone">🎧</span> qoo');
     });
   });
 
