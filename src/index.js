@@ -10,7 +10,7 @@ function visitor(node) {
       const description = gemoji.unicode[match] ?
         gemoji.unicode[match].description :
         '';
-      return `<span role="img" aria-labelledby="${description}">${match}</span>`;
+      return `<span role="img" aria-label="${description}">${match}</span>`;
     },
   );
 }
