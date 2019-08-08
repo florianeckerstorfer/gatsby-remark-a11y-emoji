@@ -1,7 +1,7 @@
 {
   "name": "gatsby-remark-a11y-emoji",
   "description": "Gatsby Plugin to make Emoji in Markdown accessible. Wraps Emoji in a <span>-Tag with role and aria-label attributes.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "bugs": {
