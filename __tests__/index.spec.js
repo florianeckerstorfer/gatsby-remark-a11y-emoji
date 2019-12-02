@@ -1,4 +1,4 @@
-const plugin = require('../index');
+const plugin = require('../src/index');
 const Remark = require('remark');
 const visit = require('unist-util-visit');
 
@@ -9,11 +9,11 @@ describe('gatsby-remark-a11y-emoji', () => {
     remark = new Remark().data('settings', {
       commonmark: true,
       footnotes: true,
-      pedantic: true
+      pedantic: true,
     });
   });
 
-  it('test "🎸"', () => {
+  it('should return HTML for "🎸"', () => {
     const markdownAST = remark.parse('🎸');
     const result = plugin({ markdownAST });
 
@@ -22,20 +22,22 @@ describe('gatsby-remark-a11y-emoji', () => {
     });
   });
 
-  it('test "foo 🎸 bar 🎧 qoo"', () => {
+  it('should return HTML for "foo 🎸 bar 🎧 qoo"', () => {
     const markdownAST = remark.parse('foo 🎸 bar 🎧 qoo');
     const result = plugin({ markdownAST });
 
     visit(result, 'html', node => {
-      expect(node.value).toBe('foo <span role="img" aria-label="guitar">🎸</span> bar <span role="img" aria-label="headphone">🎧</span> qoo');
+      expect(node.value).toBe(
+        'foo <span role="img" aria-label="guitar">🎸</span> bar <span role="img" aria-label="headphone">🎧</span> qoo'
+      );
     });
   });
 
-  it('test if it keeps other node', async () => {
+  it('should return do nothing to other nodes', async () => {
     const markdownAST = remark.parse('foo **bar**');
 
     const transformed = await plugin({
-      markdownAST: Object.assign({}, markdownAST)
+      markdownAST: Object.assign({}, markdownAST),
     });
 
     expect(transformed).toEqual(markdownAST);
