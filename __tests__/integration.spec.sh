@@ -7,29 +7,51 @@ sh -c "rm -rf gatsby-integration-test"
 
 local_registry="http://0.0.0.0:4873"
 
+echo "hello 1"
+
 # start local registry
 tmp_registry_log=`mktemp`
-sh -c "nohup verdaccio --config ./scripts/verdaccio.yaml &>$tmp_registry_log &"
+nohup verdaccio --config ./scripts/verdaccio.yaml &>$tmp_registry_log &
+
+echo "hello 2"
+
 # wait for `verdaccio` to boot
-sh -c "grep -q 'http address' <(tail -f $tmp_registry_log)"
+grep -q 'http address' <(tail -f $tmp_registry_log)
+
+echo "hello 3"
+
 # login so we can publish packages
-sh -c "npm-auth-to-token -u test -p test -e test@test.com --registry $local_registry"
+npm-auth-to-token -u test -p test -e test@test.com --registry $local_registry
+
+echo "hello 4"
+
 # Run npm command
-sh -c "npm --registry $local_registry publish"
+npm --registry $local_registry publish
+
+echo "hello 5"
 
 # Install Gatsby and
-sh -c "npx gatsby new gatsby-integration-test https://github.com/gatsbyjs/gatsby-starter-blog"
-sh -c "cd gatsby-integration-test"
+npx gatsby new gatsby-integration-test https://github.com/gatsbyjs/gatsby-starter-blog
 
-sh -c "npm install gatsby-remark-a11y-emoji -r $local_registry "
+echo "hello 6"
 
-sh -c "sed -i -e 's/gatsby-remark-smartypants/gatsby-remark-a11y-emoji/g' gatsby-config.js"
+cd gatsby-integration-test
+
+npm install gatsby-remark-a11y-emoji -r $local_registry 
+
+echo "hello 7"
+
+sed -i -e 's/gatsby-remark-smartypants/gatsby-remark-a11y-emoji/g' gatsby-config.js
+
+echo "hello 8"
 
 # Add Emoji to a Markdown page
-sh -c "echo '🎸🎤👯‍♂️' >> content/blog/hello-world/index.md"
+echo '🎸🎤👯‍♂️' >> content/blog/hello-world/index.md
 
 # Build Gatsby
-sh -c "npx gatsby build"
+npx gatsby build
+
+echo "hello 9"
 
 # Check if Emoji was been converted
 if grep -q guitar public/hello-world/index.html; then
