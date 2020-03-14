@@ -21,7 +21,7 @@ grep -q 'http address' <(tail -f $tmp_registry_log)
 echo "hello 3"
 
 # login so we can publish packages
-npm-auth-to-token -u test -p test -e test@test.com --registry $local_registry
+npx npm-auth-to-token -u test -p test -e test@test.com --registry $local_registry
 
 echo "hello 4"
 
