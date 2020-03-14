@@ -23,16 +23,16 @@
   ],
   "main": "index.js",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
     "babel-preset-env": "^1.7.0",
-    "cross-env": "^7.0.0",
+    "cross-env": "^7.0.2",
     "jest": "^25.1.0",
-    "remark": "^11.0.1",
-    "unist-util-visit": "^2.0.0"
+    "remark": "^11.0.2",
+    "unist-util-visit": "^2.0.2"
   },
   "dependencies": {
     "emoji-regex": "^8.0.0",
-    "gemoji": "^4.2.1"
+    "gemoji": "^5.0.0"
   }
 }
