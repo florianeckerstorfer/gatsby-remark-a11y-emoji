@@ -33,7 +33,7 @@
     "unist-util-visit": "^2.0.2"
   },
   "dependencies": {
-    "emoji-regex": "^8.0.0",
+    "emoji-regex": "^9.0.0",
     "gemoji": "^5.0.0"
   }
 }
