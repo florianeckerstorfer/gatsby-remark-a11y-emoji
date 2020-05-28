@@ -36,7 +36,8 @@ npx gatsby build
 
 echo ">>> Check if Emoji was been converted..."
 grep guitar public/hello-world/index.html
-if grep -q guitar public/hello-world/index.html; then
+if grep -q guitar public/hello-world/index.html
+then
   echo "Success, emoji is wrapped with A11y information"
   exit 0
 else
