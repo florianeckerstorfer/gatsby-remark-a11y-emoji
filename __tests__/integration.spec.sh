@@ -28,7 +28,7 @@ cd gatsby-integration-test
 npm install gatsby-remark-a11y-emoji --registry $local_registry 
 
 echo ">>> Configure plugin and add emoji to a page..."
-sed -e 's/gatsby-remark-smartypants/gatsby-remark-a11y-emoji/g' gatsby-config.js
+sed -i -e 's/gatsby-remark-smartypants/gatsby-remark-a11y-emoji/g' gatsby-config.js
 echo '🎸🎤👯‍♂️' >> content/blog/hello-world/index.md
 
 echo ">>> Build Gatsby..."
