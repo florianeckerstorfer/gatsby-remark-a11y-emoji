@@ -35,8 +35,10 @@ echo ">>> Build Gatsby..."
 npx gatsby build
 
 echo ">>> Check if Emoji was been converted..."
-grep -q guitar public/hello-world/index.html
-contains_a11y=$?
-echo "Test complete: contains_a11y=$contains_a11y"
-
-exit $contains_a11y
+if grep -q guitar public/hello-world/index.html; then
+  echo "Success, emoji is wrapped with A11y information"
+  exit 0
+else
+  echo "Failure, emoji is not wrapped with A11y information"
+  exit 1
+fi
