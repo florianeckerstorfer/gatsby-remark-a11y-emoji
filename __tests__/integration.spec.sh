@@ -11,6 +11,7 @@ local_registry="http://localhost:4873"
 original_npm_registry_url=`npm get registry`
 
 echo "Starting Gatsby installation..."
+mkdir -p ~/.config/gatsby
 echo '{ "telemetry": { "enabled": false }, "cli": { "packageManager": "npm" } }' > ~/.config/gatsby/config.json
 npx gatsby new gatsby-integration-test https://github.com/gatsbyjs/gatsby-starter-blog
 
