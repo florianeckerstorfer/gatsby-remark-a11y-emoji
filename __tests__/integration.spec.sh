@@ -44,8 +44,9 @@ npx gatsby build
 
 echo "Check if Emoji was been converted..."
 cat public/hello-world/index.html
+
 if grep -q guitar public/hello-world/index.html; then
-  exit 1
-else
   exit 0
+else
+  exit 1
 fi
