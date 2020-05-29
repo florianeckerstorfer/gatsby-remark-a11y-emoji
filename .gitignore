@@ -1,10 +1,22 @@
+# Built code
+/index.js
+
 .DS_Store
 *.log
+
+# Test output
 .nyc_output/
 coverage/
 node_modules/
-/index.js
 .idea
+
+# Integration test stuff
 scripts/htpasswd
 scripts/storage
 /gatsby-integration-test/
+
+# lock files
+yarn.lock
+package-lock.json
+# ignore any lock file other than main lock file
+!/yarn.lock
