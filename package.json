@@ -22,6 +22,9 @@
     "emoji",
     "a11y"
   ],
+  "engines": {
+    "node": ">=10.13.0"
+  },
   "main": "index.js",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
