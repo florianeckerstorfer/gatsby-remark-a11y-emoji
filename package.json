@@ -28,7 +28,7 @@
     "@babel/core": "^7.8.7",
     "babel-preset-env": "^1.7.0",
     "cross-env": "^7.0.2",
-    "jest": "^25.1.0",
+    "jest": "^26.0.1",
     "minimist": ">=1.2.2",
     "verdaccio": "^4.5.1",
     "remark": "^12.0.0",
