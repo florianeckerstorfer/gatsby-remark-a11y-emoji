@@ -2,6 +2,9 @@
 
 > Gatsby Plugin to make Emoji in Markdown accessible. Wraps Emoji in a `<span>`-Tag with `role` and `aria-label` attributes.
 
+![Unit tests](https://github.com/florianeckerstorfer/gatsby-remark-a11y-emoji/workflows/Unit%20tests/badge.svg)
+![Integration tests](https://github.com/florianeckerstorfer/gatsby-remark-a11y-emoji/workflows/Integration%20tests/badge.svg)
+
 Made by 👨‍💻 [Florian Eckerstorfer](https://florian.ec) in 🎡 Vienna, Europe.
 
 ## Table of Contents

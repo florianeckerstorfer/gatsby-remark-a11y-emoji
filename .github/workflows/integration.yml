@@ -1,4 +1,4 @@
-name: Integration tests (Linux)
+name: Integration tests
 
 on: [push]
 
