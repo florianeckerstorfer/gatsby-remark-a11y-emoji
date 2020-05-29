@@ -4,6 +4,9 @@
 
 - CI: #32 Add integration test
 - CI: #57 Set minimum Node version to 10.13.0 (same as Gatsby)
+- #60 Remove lock files from Git
+- Documentation: Add [Code of Conduct](CODE_OF_CONDUCT.md)
+- Documentation: Add Bug Report Issue Template
 - Update dependencies
 
 ## Version 1.0.1 (8 August 2019)
