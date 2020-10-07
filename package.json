@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "emoji-regex": "^9.0.0",
-    "gemoji": "^5.0.0"
+    "gemoji": "^6.0.0"
   }
 }
