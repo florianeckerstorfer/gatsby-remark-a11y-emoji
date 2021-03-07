@@ -1,4 +1,6 @@
-# gatsby-remark-a11y-emoji
+# [DEPRECATED] gatsby-remark-a11y-emoji
+
+This plugin is now directly included in [@fec/remark-a11y-emoji](https://github.com/florianeckerstorfer/remark-a11y-emoji).
 
 > Gatsby Plugin to make Emoji in Markdown accessible. Wraps Emoji in a `<span>`-Tag with `role` and `aria-label` attributes.
 
@@ -43,7 +45,7 @@ First you need to install the plugin with NPM or Yarn:
 npm install --save gatsby-remark-a11y-emoji
 ```
 
-Add the plugin to `gatsby-config.js`. Since `gatsby-remark-a11y-emoji` converts Remark *text* nodes into *html* nodes, I recommend placing it at the very end of the plugins list.
+Add the plugin to `gatsby-config.js`. Since `gatsby-remark-a11y-emoji` converts Remark _text_ nodes into _html_ nodes, I recommend placing it at the very end of the plugins list.
 
 ```
 module.exports = {
@@ -69,4 +71,3 @@ See [LICENSE](LICENSE.md)
 ## Change log
 
 See [CHANGELOG](CHANGELOG.md)
-
