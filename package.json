@@ -33,7 +33,7 @@
     "cross-env": "^7.0.2",
     "jest": "^26.0.1",
     "minimist": ">=1.2.2",
-    "verdaccio": "^4.5.1",
+    "verdaccio": "^5.0.1",
     "remark": "^13.0.0",
     "unist-util-visit": "^2.0.2"
   },
